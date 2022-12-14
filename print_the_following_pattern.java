@@ -6,11 +6,18 @@ class Pattern
         Scanner sc=new Scanner(System.in);
         int n,i,j;
         n=sc.nextInt();
-        for(i=n;i>=1;i--)
+        for(i=1;i<=n;i++)
         {
-            for(j=n;j>=1;j--)
+            for(j=1;j<=n;j++)
             {
-                System.out.printf("%d ",j);
+                if(i==j)
+                {
+                    System.out.printf("0");
+                }
+                else
+                {
+                    System.out.printf("x");
+                }
             }
             System.out.printf("
 ");
