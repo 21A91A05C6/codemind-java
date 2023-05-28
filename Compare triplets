@@ -1,0 +1,36 @@
+import java.util.*;
+public class Triplets
+{
+    public static void main(String args[])
+    {
+        Scanner sc=new Scanner(System.in);
+        //int n=sc.nextInt();
+        int arr[]=new int[3];
+        int brr[]=new int[3];
+        int c1=0,c2=0;
+        for(int i=0;i<3;i++)
+        {
+            arr[i]=sc.nextInt();
+        }
+        for(int i=0;i<3;i++)
+        {
+            brr[i]=sc.nextInt();
+        }
+        for(int i=0;i<3;i++)
+        {
+            if(arr[i]>brr[i])
+            {
+                c1++;
+            }
+            if(arr[i]<brr[i])
+            {
+                c2++;
+            }
+            if(arr[i]==brr[i])
+            {
+                System.out.printf("");
+            }
+        }
+        System.out.printf("%d %d",c1,c2);
+    }
+}
