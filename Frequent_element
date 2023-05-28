@@ -1,0 +1,37 @@
+import java.util.*;
+public class Frequent
+{
+    public static void main(String args[])
+    {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int arr[]=new int[n];
+        int b=0,c=0;
+        for(int i=0;i<n;i++)
+        {
+            arr[i]=sc.nextInt();
+        }
+        int max=0;
+        for(int i=0;i<n;i++)
+        {
+            c=0;
+            for(int j=i;j<n;j++)
+            {
+                if(arr[i]==arr[j])
+                {
+                    c++;
+                }
+            }
+            if(c==max && arr[i]<b)
+            {
+                b=arr[i];
+            }
+            if(c>max)
+            {
+                max=c;
+                b=arr[i];
+            }
+        }
+        System.out.printf("%d",b);
+    }
+}
